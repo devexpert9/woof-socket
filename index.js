@@ -16,6 +16,10 @@ io.on("connection", (socket) => {
     console.log("online");
     io.emit("online", result);
   });
+  socket.on("rec_message", (result) => {
+    console.log("rec_message");
+    io.emit("rec_message", result);
+  });
 });
 
 var port = process.env.PORT || 3001;
